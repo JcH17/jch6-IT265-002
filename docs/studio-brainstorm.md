@@ -1,24 +1,24 @@
 ## Studio Name Ideas
 - **Primary Ideas:**
-  - [CRaZY x GaMES]
-  - [M]
-  - [Insert name idea 3]
+  - [CRaZYxGAMING
+  - [PhoenixHen Studios
+  - GameBreak Studio
 - **Alternative Ideas:**
   - [Insert alternative name idea 1]
   - [Insert alternative name idea 2]
   - [Insert alternative name idea 3]
 
-- **Chosen Name**:
-- **About the name**:
-- **Social Medias with name available**:
-- **Possible domain names available**:
+- **Chosen Name**: CRaZY x GaMES
+- **About the name**: This studio name is similar to a gamertag that I've been using for years. It's clan name that I got with a group of friends and family.
+- **Social Medias with name available**: @CRaZYxGAMING STUDIO
+- **Possible domain names available**:www.CRaZYxGAMING.com
 
 ---
 
 ## Vision Statement
 *What is the mission of your solo game studio? How does it align with creating and analyzing innovative game architectures?*
 
-> [Write a concise and inspiring vision statement here.]
+> [The name reminds me of fun memories playing games with my friends and this game studio mission is to help players recreate those same fun memories either with friends or not.
 
 ---
 
