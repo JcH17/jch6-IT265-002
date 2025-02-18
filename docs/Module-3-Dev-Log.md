@@ -1,27 +1,26 @@
-<!-- Markdown Docs: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax -->
-## Name: 
-### Module:
+
+## Name: Justin Herbert
+### Module: 3
 
 <!-- Repeat the below as needed-->
-### Date: [MM/DD/YYYY]
+### Date: [2/18/25]
 
 #### Goals for this Module
-<!-- Example Template (include the brackets to make a checklist, fill them in as appropriate
-- [ ] Goal 1
-- [ ] Goal 2
-- [ ] Goal 3
--->
+
+- [x] Play or review some games I've played to complete HW assignment
+- [x] Complete Discussion on bad game mechanics
+
 
 #### Progress
 - **What I accomplished**:
   - Summarize completed tasks or progress made.
-  - <!--Your entry here or N/A if not applicable for this entry-->
+  - I pretty much installed and replayed some games that I can write about for my homework except Call of Duty MW2(2022) which was one of the games I wrote about, because I dislike it and I didn't really need a reminder of what they did wrong. I put down some notes of whatever came to my mind while playing through the games again on what were some mechanics that were annoying or a inconvience to me as a player.
 - **Challenges faced**:
   - Describe blockers, bugs, or issues encountered.
-  -  <!--Your entry here or N/A if not applicable for this entry-->
+  -  N/A
 - **Solutions**:
   - Detail how you addressed challenges or your thought process.
-  -  <!--Your entry here or N/A if not applicable for this entry-->
+  -  N/A
 
 #### Learnings
 - Key insights, techniques, or concepts explored.
@@ -29,16 +28,8 @@
 
 #### Free Thinking
 - Brainstorm or reflect on design ideas, architecture patterns, or potential improvements.
--  <!--Your entry here or N/A if not applicable for this entry-->
-<!--
-
-- Example prompts:
-  - "What if the player interactions were asynchronous instead of real-time?"
-  - "How could ECS improve performance in this system?"
-  - "Does my current design support scalability? How can it improve?"
-  
--->
+-  N/A
 
 #### Next Steps
 - Tasks or experiments to focus on during the next session.
--  <!--Your entry here or N/A if not applicable for this entry-->
+-  Begin some brainstorming and have a good idea of what can I game I'd like to create for the semester
