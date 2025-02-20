@@ -24,7 +24,7 @@
 
 #### Learnings
 - Key insights, techniques, or concepts explored.
--  <!--Your entry here or N/A if not applicable for this entry-->
+-  In this module I was able to get a good understanding on how look and feel drive game design. Immersion in a game is dependent on ambience, storytelling, and interface. There was also a discussion of how color helps enhance immersion and gameplay experience such as interactive elements and creating a mood within a game.
 
 #### Free Thinking
 - Brainstorm or reflect on design ideas, architecture patterns, or potential improvements.
