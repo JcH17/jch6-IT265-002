@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,11 +11,22 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 targetPosition;
 
     private Queue<Tiles> tileQueue = new Queue<Tiles>();
+
+    public GameObject decisionPanel;
+    public Button leftButton;
+    public Button rightButton;
+    private Tiles leftPathTile;
+    private Tiles rightPathTile;
+    private int remainingMoves = 0;
     // Start is called before the first frame update
     void Start()
     {
         if(currentTile != null){
             transform.position = currentTile.transform.position;
+        }
+
+        if(decisionPanel != null){
+            decisionPanel.SetActive(false);
         }
     }
 
@@ -23,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(isMoving){
             MoveToTarget();
-            return;
+            //return;
         }
 
         //jch6 movement test with spacebar
@@ -38,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public void MoveSpaces(int spaces){
-        Tiles tile = currentTile;
+        /*Tiles tile = currentTile;
 
         for(int i = 0; i < spaces; i++){
             if(tile.nextTiles.Count > 0){
@@ -52,14 +64,55 @@ public class PlayerMovement : MonoBehaviour
         
         if(tileQueue.Count > 0){
             MoveToNextTile();
+        }*/
+
+        remainingMoves = spaces;
+        MoveForward();
+    }
+
+    void MoveForward(){
+        if (remainingMoves <= 0)
+            return;
+
+        if (currentTile.nextTiles.Count == 1){
+            Tiles nextTile = currentTile.nextTiles[0];
+            tileQueue.Enqueue(nextTile);
+            currentTile = nextTile;
+            remainingMoves--;
+            MoveToNextTile();
+        }
+        else if (currentTile.nextTiles.Count == 2){
+            leftPathTile = currentTile.nextTiles[0];
+            rightPathTile = currentTile.nextTiles[1];
+            ShowDecisionPanel();
+        }
+        else{
+            Debug.Log("No path forward or unsupported path split.");
         }
     }
 
+    void ShowDecisionPanel(){
+        decisionPanel.SetActive(true);
+        leftButton.onClick.RemoveAllListeners();
+        rightButton.onClick.RemoveAllListeners();
+        leftButton.onClick.AddListener(() => ChoosePath(leftPathTile));
+        rightButton.onClick.AddListener(() => ChoosePath(rightPathTile));
+    }
+
+    void ChoosePath(Tiles chosenTile){
+        decisionPanel.SetActive(false);
+        tileQueue.Enqueue(chosenTile);
+        currentTile = chosenTile;
+        remainingMoves--;
+        MoveToNextTile();
+    }
+
     void MoveToNextTile(){
-        if(tileQueue.Count == 0) return;
+        if(tileQueue.Count == 0) 
+        return;
         Tiles next = tileQueue.Dequeue();
         targetPosition = next.transform.position;
-        currentTile = next;
+        //currentTile = next;
         isMoving = true;
     }
 
@@ -69,9 +122,11 @@ public class PlayerMovement : MonoBehaviour
             transform.position = targetPosition;
             isMoving = false;
 
-            if(tileQueue.Count > 0){
+            /*if(tileQueue.Count > 0){
                 MoveToNextTile();
-            }
+            }*/
+
+            MoveForward();
         }
     }
 }
