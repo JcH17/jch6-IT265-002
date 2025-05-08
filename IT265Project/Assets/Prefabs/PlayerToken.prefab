@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 279367141670417938}
   - component: {fileID: 3381139385939183391}
   - component: {fileID: -814164847658017797}
+  - component: {fileID: -3515081010923226860}
   m_Layer: 0
   m_Name: PlayerToken
   m_TagString: Player
@@ -99,3 +100,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTile: {fileID: 0}
   moveSpeed: 4
+  decisionPanel: {fileID: 0}
+  leftButton: {fileID: 0}
+  rightButton: {fileID: 0}
+--- !u!114 &-3515081010923226860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4841535260494315231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 976391d2efe85894ca5e11f94a622f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileType: {fileID: 0}

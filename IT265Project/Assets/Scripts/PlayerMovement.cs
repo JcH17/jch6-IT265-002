@@ -122,11 +122,21 @@ public class PlayerMovement : MonoBehaviour
             transform.position = targetPosition;
             isMoving = false;
 
-            /*if(tileQueue.Count > 0){
-                MoveToNextTile();
+            /*TileInteractionManager tileInteractionHandler = GetComponent<TileInteractionManager>();
+            if(tileInteractionHandler != null && currentTile != null){
+                tileInteractionHandler.TileInteraction(currentTile);
             }*/
 
-            MoveForward();
+            if(remainingMoves > 0 || tileQueue.Count > 0){
+                MoveForward();
+            } else {
+                TileInteractionManager tileInteractionHandler = GetComponent<TileInteractionManager>();
+                if(tileInteractionHandler != null && currentTile != null){
+                    tileInteractionHandler.TileInteraction(currentTile);
+                }
+            }
+
+            //MoveForward();
         }
     }
 }
