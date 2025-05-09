@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e786a7f479c7c764eb4316a69358ede4, type: 3}
-  m_Name: CrisisCard
+  m_Name: WealthCardTest2 1
   m_EditorClassIdentifier: 
-  cardTitle: Test Crisis Card
-  description: Its a crisis!
-  choice1Text: Lose -100 Gold
+  cardTitle: Test Wealth 3
+  description: Really ballin
+  choice1Text: +20 Bonus
   choice1Effect:
-    crownChange: 0
-    wisdomChange: 0
+    crownChange: -1
+    wisdomChange: -1
     goldChange: -100
-    bonusTaxAmount: 0
-  choice2Text: Lose -100 Gold
+    bonusTaxAmount: 20
+  choice2Text: Decline
   choice2Effect:
     crownChange: 0
     wisdomChange: 0
-    goldChange: -100
+    goldChange: 0
     bonusTaxAmount: 0
-  cardColor: {r: 0.9176471, g: 0.10980393, b: 0.10980393, a: 1}
-  isWealthCard: 0
+  cardColor: {r: 0.9921569, g: 0.8078432, b: 0, a: 1}
+  isWealthCard: 1

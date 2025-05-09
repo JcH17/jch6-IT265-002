@@ -111,6 +111,15 @@ public class PlayerMovement : MonoBehaviour
         if(tileQueue.Count == 0) 
         return;
         Tiles next = tileQueue.Dequeue();
+        currentTile = next;
+        
+        if(next.tileType == TileType.Tax){
+            TileInteractionManager tileInteraction = GetComponent<TileInteractionManager>();
+            if(tileInteraction != null){
+                tileInteraction.EarnTaxGold();
+            }
+        }
+
         targetPosition = next.transform.position;
         //currentTile = next;
         isMoving = true;

@@ -14,6 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardTitle: Test Wealth card
   description: You balling
-  choice1Text: choice 1
-  choice2Text: choice 2
+  choice1Text: Gain +1 to tax
+  choice1Effect:
+    crownChange: 0
+    wisdomChange: 0
+    goldChange: -100
+    bonusTaxAmount: 1
+  choice2Text: Decline
+  choice2Effect:
+    crownChange: 0
+    wisdomChange: 0
+    goldChange: 0
+    bonusTaxAmount: 0
   cardColor: {r: 0.9921569, g: 0.8078432, b: 0, a: 1}
+  isWealthCard: 1

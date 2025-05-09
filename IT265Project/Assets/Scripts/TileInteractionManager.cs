@@ -14,37 +14,42 @@ public class TileInteractionManager : MonoBehaviour
     public List<CardData> regularCards;
     public List<CardData> wealthCards;
 
+    public PlayerStats playerStats;
+
 
 
     void DrawCrownCard(){
         Debug.Log("Drawing crown card..");
-        DrawCardFromDeck(crownCards);
+        DrawCardFromDeck(crownCards, GetComponent<PlayerStats>());
     }
 
     void DrawWisdomCard(){
         Debug.Log("Drawing wisdom card..");
-        DrawCardFromDeck(wisdomCards);
+        DrawCardFromDeck(wisdomCards, GetComponent<PlayerStats>());
     }
 
     void DrawCrisisCard(){
         Debug.Log("Drawing crisis card..");
-        DrawCardFromDeck(crisisCards);
+        DrawCardFromDeck(crisisCards, GetComponent<PlayerStats>());
     }
 
     void DrawRegularCard(){
         Debug.Log("Drawing regular card..");
-        DrawCardFromDeck(regularCards);
+        DrawCardFromDeck(regularCards, GetComponent<PlayerStats>());
     }
 
     void DrawWealthCard(){
         Debug.Log("Drawing wealth card..");
-        DrawCardFromDeck(wealthCards);
+        //DrawCardFromDeck(wealthCards, GetComponent<PlayerStats>());
+        CardData newWealthCard = wealthCards[Random.Range(0, wealthCards.Count)];
+        PlayerStats player = GetComponent<PlayerStats>();
+        cardManager.ShowCard(newWealthCard, player);
     }
 
-    void DrawCardFromDeck(List<CardData> deck){
+    void DrawCardFromDeck(List<CardData> deck, PlayerStats player){
         if(deck.Count > 0 && cardManager != null){
             CardData card = deck[Random.Range(0, deck.Count)];
-            cardManager.ShowCard(card);
+            cardManager.ShowCard(card, player);
         }
     }
 
@@ -81,6 +86,14 @@ public class TileInteractionManager : MonoBehaviour
         }
     }
 
+    public void EarnTaxGold(){
+        if(playerStats != null){
+            //playerStats.AddGold(100);
+            Debug.Log("Collecting gold from your peasants. +100 gold");
+            int bonus = playerStats.GetTaxBonus();
+            playerStats.AddGold(100 + bonus);
+        }
+    }
     
 
 
@@ -89,6 +102,9 @@ public class TileInteractionManager : MonoBehaviour
     {
         if(cardManager == null){
             cardManager = FindObjectOfType<CardManager>();
+        }
+        if(playerStats == null){
+            playerStats = GetComponent<PlayerStats>();
         }
     }
 
