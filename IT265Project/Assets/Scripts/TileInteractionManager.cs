@@ -6,31 +6,46 @@ public class TileInteractionManager : MonoBehaviour
 {
     public Tiles tileType;
 
+    public CardManager cardManager;
+
+    public List<CardData> crownCards;
+    public List<CardData> wisdomCards;
+    public List<CardData> crisisCards;
+    public List<CardData> regularCards;
+    public List<CardData> wealthCards;
+
 
 
     void DrawCrownCard(){
         Debug.Log("Drawing crown card..");
-        //game logic here
+        DrawCardFromDeck(crownCards);
     }
 
     void DrawWisdomCard(){
         Debug.Log("Drawing wisdom card..");
-        //game logic here
+        DrawCardFromDeck(wisdomCards);
     }
 
     void DrawCrisisCard(){
         Debug.Log("Drawing crisis card..");
-        //game logic here
+        DrawCardFromDeck(crisisCards);
     }
 
     void DrawRegularCard(){
         Debug.Log("Drawing regular card..");
-        //game logic here
+        DrawCardFromDeck(regularCards);
     }
 
     void DrawWealthCard(){
         Debug.Log("Drawing wealth card..");
-        //game logic here
+        DrawCardFromDeck(wealthCards);
+    }
+
+    void DrawCardFromDeck(List<CardData> deck){
+        if(deck.Count > 0 && cardManager != null){
+            CardData card = deck[Random.Range(0, deck.Count)];
+            cardManager.ShowCard(card);
+        }
     }
 
     public void TileInteraction(Tiles tile){
@@ -56,7 +71,7 @@ public class TileInteractionManager : MonoBehaviour
 
             case TileType.Crisis:
                 Debug.Log("You landed on a crisis tile.");
-                DrawCrownCard();
+                DrawCrisisCard();
                 break;
 
             case TileType.Wealth:
@@ -66,11 +81,15 @@ public class TileInteractionManager : MonoBehaviour
         }
     }
 
+    
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(cardManager == null){
+            cardManager = FindObjectOfType<CardManager>();
+        }
     }
 
     // Update is called once per frame

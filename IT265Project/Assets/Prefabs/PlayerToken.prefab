@@ -116,3 +116,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: {fileID: 0}
+  cardManager: {fileID: 0}
+  crownCards:
+  - {fileID: 11400000, guid: f77c1b30bfe66ad4c81770e52e22c84e, type: 2}
+  wisdomCards:
+  - {fileID: 11400000, guid: 9aab8e1b9ff732749b540738703407ee, type: 2}
+  crisisCards:
+  - {fileID: 11400000, guid: b4b340139a02f0045978f45b7101e59f, type: 2}
+  regularCards:
+  - {fileID: 11400000, guid: 437f3f86aa5db5946aebf96fe538cde8, type: 2}
+  wealthCards:
+  - {fileID: 11400000, guid: 7a60aa4f9c8b93b4e8ed41627556b494, type: 2}
