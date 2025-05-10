@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private Tiles leftPathTile;
     private Tiles rightPathTile;
     private int remainingMoves = 0;
+    public bool isMyTurn = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,15 +39,17 @@ public class PlayerMovement : MonoBehaviour
             //return;
         }
 
-        //jch6 movement test with spacebar
-        /*if(Input.GetKeyDown(KeyCode.Space)){
-            if(currentTile.nextTiles.Count > 0){
-                Tiles nextTile = currentTile.nextTiles[0];//jch6 will go with whatever is the first option
-                targetPosition = nextTile.transform.position;
-                currentTile = nextTile;
-                isMoving = true;
-            }
-        }*/
+        if(!isMyTurn){
+            return;
+        }
+    }
+    
+    public bool IsMyTurn(){
+        return isMyTurn;
+    }
+
+    public void EnableTurn(bool value){
+        isMyTurn = value;
     }
 
     public void MoveSpaces(int spaces){
@@ -142,6 +145,10 @@ public class PlayerMovement : MonoBehaviour
                 TileInteractionManager tileInteractionHandler = GetComponent<TileInteractionManager>();
                 if(tileInteractionHandler != null && currentTile != null){
                     tileInteractionHandler.TileInteraction(currentTile);
+                }
+
+                if(currentTile.tileType == TileType.Tax){
+                    FindObjectOfType<PlayerManager>().EndTurn();
                 }
             }
 

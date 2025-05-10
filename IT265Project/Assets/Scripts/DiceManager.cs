@@ -9,7 +9,7 @@ public class DiceManager : MonoBehaviour
     public float rollDuration = 5.0f;
     private bool isRolling = false;
     public int rolledValue = 0;
-    public PlayerMovement player;
+    //public PlayerMovement player;
     
     // Start is called before the first frame update
     void Start()
@@ -20,12 +20,16 @@ public class DiceManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            if(Input.GetKeyDown(KeyCode.Space) && !isRolling){
-                StartCoroutine(RollDice());
-            }
+        
     }
 
-    IEnumerator RollDice(){
+    public void RollDiceFor(PlayerMovement player){
+        if(!isRolling){
+            StartCoroutine(RollDice(player));
+        }
+    }
+
+    IEnumerator RollDice(PlayerMovement player){
         isRolling = true;
 
         float elapsedTime = 0f;

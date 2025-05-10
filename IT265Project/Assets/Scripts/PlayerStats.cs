@@ -83,6 +83,16 @@ public class PlayerStats : MonoBehaviour
         return activeWealthCard != null ? activeWealthCard.choice1Effect.bonusTaxAmount : 0;
     }
 
+    public void AssignPanel(GameObject panel){
+        wealthCardIndicator = panel.transform.Find("WealthCardIndicator")?.gameObject;
+        goldText = panel.transform.Find("GoldText").GetComponent<TMP_Text>();
+        crownText = panel.transform.Find("CrownText").GetComponent<TMP_Text>();
+        wisdomText = panel.transform.Find("WisdomText").GetComponent<TMP_Text>();
+
+        if(wealthCardIndicator != null){
+            wealthCardIndicator.SetActive(false);
+        }
+    }
     
 
     // Update is called once per frame

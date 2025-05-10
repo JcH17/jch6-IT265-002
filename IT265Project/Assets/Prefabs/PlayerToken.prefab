@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: f020c2a7701752a499436fbec16abcf8, type: 3}
-  m_Color: {r: 0.408805, g: 0.408805, b: 0.408805, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -104,6 +104,7 @@ MonoBehaviour:
   decisionPanel: {fileID: 0}
   leftButton: {fileID: 0}
   rightButton: {fileID: 0}
+  isMyTurn: 0
 --- !u!114 &-3515081010923226860
 MonoBehaviour:
   m_ObjectHideFlags: 0

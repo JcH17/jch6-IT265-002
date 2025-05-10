@@ -137,6 +137,7 @@ public class CardManager : MonoBehaviour
         cardPanel.SetActive(false);
         currentCard = null;
         currentPlayer = null;
+        FindObjectOfType<PlayerManager>().EndTurn();
     }
     // Start is called before the first frame update
     void Start()
