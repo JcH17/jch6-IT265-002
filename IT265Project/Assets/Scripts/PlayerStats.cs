@@ -13,11 +13,18 @@ public class PlayerStats : MonoBehaviour
     public int wisdom = 0;
     public CardData activeWealthCard;
     //public CardData activePolicyCard;
+    public GameObject wealthCardIndicator;
     // Start is called before the first frame update
     void Start()
     {
         UpdatePlayerStats();
-        
+        wealthCardIndicator = transform.Find("WealthCardIndicator")?.gameObject;
+        /*if(wealthCardIndicator == null){
+           wealthCardIndicator = transform.Find("WealthCardIndicator")?.gameObject;
+        }*/
+        if(wealthCardIndicator != null){
+            wealthCardIndicator.SetActive(false);
+        }
     }
     private void UpdatePlayerStats(){
         if(crownText != null){

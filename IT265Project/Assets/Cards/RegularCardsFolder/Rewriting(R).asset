@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e786a7f479c7c764eb4316a69358ede4, type: 3}
+  m_Name: Rewriting(R)
+  m_EditorClassIdentifier: 
+  cardTitle: Rewriting the Kingdoms Code
+  description: You're given the chance to revise outdated laws in your kingdom's
+    rulebook.
+  choice1Text: Gain 1 wisdom to collaborate with historians and legal minds
+  choice1Effect:
+    crownChange: 0
+    wisdomChange: 1
+    goldChange: 0
+    bonusTaxAmount: 0
+  choice2Text: Gain 1 crown to asser your authority
+  choice2Effect:
+    crownChange: 1
+    wisdomChange: 0
+    goldChange: 0
+    bonusTaxAmount: 0
+  cardColor: {r: 0.9058824, g: 0.8196079, b: 0.6392157, a: 1}
+  isWealthCard: 0

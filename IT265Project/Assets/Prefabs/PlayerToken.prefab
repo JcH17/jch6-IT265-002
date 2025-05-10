@@ -119,17 +119,40 @@ MonoBehaviour:
   tileType: {fileID: 0}
   cardManager: {fileID: 0}
   crownCards:
-  - {fileID: 11400000, guid: f77c1b30bfe66ad4c81770e52e22c84e, type: 2}
+  - {fileID: 11400000, guid: 591b20c9888044a4bbafafa591fec465, type: 2}
+  - {fileID: 11400000, guid: 1b3b5cf02a97b054087877044fb903ea, type: 2}
+  - {fileID: 11400000, guid: 039c1521ea75adf46b9d7dbd956ee39a, type: 2}
+  - {fileID: 11400000, guid: fc63f5cc91e1fde46914b53a4e4146c4, type: 2}
+  - {fileID: 11400000, guid: 74628e9f33816b64aaa342a8c81feb12, type: 2}
   wisdomCards:
-  - {fileID: 11400000, guid: 9aab8e1b9ff732749b540738703407ee, type: 2}
+  - {fileID: 11400000, guid: 6fb50d7e41ef97049aedcfaff58e6d0d, type: 2}
+  - {fileID: 11400000, guid: 037db764f25e91545a216bf8c77b6b26, type: 2}
+  - {fileID: 11400000, guid: 0bb0234873561984eb044838962a6659, type: 2}
+  - {fileID: 11400000, guid: f1eaf4fa105200e43958a46f91e9976d, type: 2}
+  - {fileID: 11400000, guid: 591d4adf6614ac340ad9588b8024fd51, type: 2}
   crisisCards:
-  - {fileID: 11400000, guid: b4b340139a02f0045978f45b7101e59f, type: 2}
+  - {fileID: 11400000, guid: 3da6cba48c910c44ea33927a99dd52a2, type: 2}
+  - {fileID: 11400000, guid: 1c1004f6bc4013f4289e9481187b69ca, type: 2}
+  - {fileID: 11400000, guid: 350e5aeeffb78c943b890b90347883f9, type: 2}
+  - {fileID: 11400000, guid: df24956f0d43dfb4a857fa6d5417baf8, type: 2}
+  - {fileID: 11400000, guid: b4d01974afda3c84892c3566ccf3f539, type: 2}
   regularCards:
-  - {fileID: 11400000, guid: 437f3f86aa5db5946aebf96fe538cde8, type: 2}
+  - {fileID: 11400000, guid: dac0d0548474de249ad1448d8cae4a71, type: 2}
+  - {fileID: 11400000, guid: 3d1c3d753263f764a9a51f284f9946a5, type: 2}
+  - {fileID: 11400000, guid: 3307e9a9c28315a42965d8f345767ec3, type: 2}
+  - {fileID: 11400000, guid: b4fae09e99640b84bb1e4dd4ba98c6f8, type: 2}
+  - {fileID: 11400000, guid: da56d7ba2f1b6114094d533f99db68c8, type: 2}
+  - {fileID: 11400000, guid: 4aa4324ee16725c478493c9558de47f1, type: 2}
+  - {fileID: 11400000, guid: addc8310ba4f6f946b548cf8ef75600e, type: 2}
+  - {fileID: 11400000, guid: fe52242700a7b5742b963c85e731d554, type: 2}
+  - {fileID: 11400000, guid: 01f831e9915d089449e2b8767c04dc82, type: 2}
   wealthCards:
-  - {fileID: 11400000, guid: 7a60aa4f9c8b93b4e8ed41627556b494, type: 2}
-  - {fileID: 11400000, guid: f38c5c23fc344eb4796df6eecfb80090, type: 2}
-  - {fileID: 11400000, guid: 71c5b21e34e69b846982886e0785aef5, type: 2}
+  - {fileID: 11400000, guid: 77d5173427529af449f953a0d48cbaaa, type: 2}
+  - {fileID: 11400000, guid: 45eabf06ce64d514bb78641e23013f98, type: 2}
+  - {fileID: 11400000, guid: 6a9efca06f7619341ad685e44c94d5f1, type: 2}
+  - {fileID: 11400000, guid: 30d5bfb59f0fc0c458dfebe8e053cc95, type: 2}
+  - {fileID: 11400000, guid: 5119ac2c00244c04f99fb3a1ceae2d40, type: 2}
+  - {fileID: 11400000, guid: a975f636f73518542ac950878d1686a9, type: 2}
   playerStats: {fileID: 0}
 --- !u!114 &-6360041820956026511
 MonoBehaviour:
@@ -144,9 +167,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goldText: {fileID: 0}
-  gold: 0
+  gold: 1000
   crownText: {fileID: 0}
   crown: 0
   wisdomText: {fileID: 0}
   wisdom: 0
   activeWealthCard: {fileID: 0}
+  wealthCardIndicator: {fileID: 0}

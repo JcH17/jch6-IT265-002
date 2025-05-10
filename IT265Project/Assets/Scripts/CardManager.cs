@@ -62,12 +62,13 @@ public class CardManager : MonoBehaviour
                 return;
             }*/
             if(card.isWealthCard){
-                if(player.activeWealthCard != null){
-                    Debug.Log("Replacing {player.activeWealthCard.cardTitle} with + {card.cardTitle}");
-                } else{
-                    Debug.Log("Obtain {card.cardTitle}");
-                }
                 currentPlayer.activeWealthCard = card;
+                if(currentPlayer.wealthCardIndicator != null){
+                    currentPlayer.wealthCardIndicator.SetActive(true);
+                    Debug.Log("WealthCardIndicator active");
+                } else {
+                    Debug.LogWarning("Indicator is null!");
+                }
             }
             CloseCard();
         });

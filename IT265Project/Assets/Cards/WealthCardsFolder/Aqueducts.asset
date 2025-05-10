@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e786a7f479c7c764eb4316a69358ede4, type: 3}
+  m_Name: Aqueducts
+  m_EditorClassIdentifier: 
+  cardTitle: Aqueducts
+  description: These advanced water channels bring prosperity and health to your
+    cities, supporting rapid population growth and efficient infrastructure across
+    your lands.
+  choice1Text: Spend 1000 gold and gain +500 every tax tile
+  choice1Effect:
+    crownChange: 0
+    wisdomChange: 0
+    goldChange: -1000
+    bonusTaxAmount: 500
+  choice2Text: Decline
+  choice2Effect:
+    crownChange: 0
+    wisdomChange: 0
+    goldChange: 0
+    bonusTaxAmount: 0
+  cardColor: {r: 0.9921569, g: 0.8078432, b: 0, a: 1}
+  isWealthCard: 1
