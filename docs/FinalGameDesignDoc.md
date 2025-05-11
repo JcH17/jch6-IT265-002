@@ -2,7 +2,13 @@
 
 ---
 ## Change Log
-- 
+- Due to time constraints and implementation challenges, I was unable to incorporate the Lucky Number feature into the final version of the demo. Although the idea was to add a randomly assigned number to each player that, when rolled, would grant a special bonus, I ran into issues integrating this mechanic into the existing dice system and player logic. Given the limited development window, I chose to prioritize core gameplay features and stability over adding this optional mechanic.
+
+- Due to time contraints and implementation challenges, I was unable to incorporate the War tile feature properly into the final version of the demo. The idea was that players are able to interact with other players and compete for each other's resources. I worked on the war phase whenever a player lands on the war tile but there were issues in player logic where the selected resources weren't being transferred properly to the winner. Given the limited development window, I chose to bench this feature to prioritize the stability of the game and avoid creating more issues.
+
+- Lowered the amount of tiles within the game compared to the physical prototype. When there's a player count up to 4 the game takes a long time to complete since every player needs to roll and select decisions on cards they receive. Even with only two players I felt the game was taking too long which would cause player engagement to decrease so lowering the amount of tiles was ideal and be able to shorten game time. 
+
+- Dice change from 2d6 to 1d6 to better help with the lowered tile amount. If 2d6 was kept then the players were able to easily speed through the game board without being able to collect enough resources from the proper tiles. 1d6 provide the right pacing and players are landing on certain tiles more frequent and be able to collect more of a certain category.
 
 ---
 
@@ -274,27 +280,27 @@ How will you mitigate these risks?
 
 ### Feedback 1
 - **Reviewer**:  
-  <!-- Enter name and relation to you -->
+  Ryan(Cousin)
 - **Summary**:  
-  <!-- Summarize feedback focusing on concept, mechanics, and style -->
+  Enjoys the concept and mechanics of the game where there is different opportunities to earn something different. Not everything is set in stone and you have the potential to earn more. The title bonuses and the different titles provides something special to every playthrough and adds competition in wanting to achieve a certain title such as "Emperor of Legacy". Complaint on how the game UI didn't seem very "medieval-like".
 - **Refinement**:  
-  <!-- Explain how this feedback will improve the design -->
+  The HUD and UI should match with the theme of the game. It looked generic and didn't give a medieval feel.
 
 ### Feedback 2
 - **Reviewer**:  
-  <!-- Enter name and relation to you -->
+  Rick(Friend)
 - **Summary**:  
-  <!-- Summarize feedback focusing on concept, mechanics, and style -->
+  The game felt a little slow at times given the dice rolls would sometimes make them move 1-3 spaces. It's not a huge complaint. They wanted some more endgame scenarios for player to increase the level of challenge when they reach the end of the game.
 - **Refinement**:  
-  <!-- Explain how this feedback will improve the design -->
+  Adding scenarious for when some players reach the end of the board could add more depth in player interaction. Creating dilemmas or choice cards to relfect that their reign is reaching an end and if they would like to gain more resources but it requires more to spend.
 
 ### Feedback 3
 - **Reviewer**:  
-  <!-- Enter name and relation to you -->
+  Darren(Dad)
 - **Summary**:  
-  <!-- Summarize feedback focusing on concept, mechanics, and style -->
+  The game seemed easy to follow but it was difficult to keep track of the players and the information seen on screen. Font's seemed a little too small but is still readable.
 - **Refinement**:  
-  <!-- Explain how this feedback will improve the design -->
+  Increasing the font size and adjusting the UI to fit the newly size incresased font could help with players that have a hard time reading the text on cards. On the resource panels for each player it would be good to highlight the panel of whoever's turn it is. So if its player 1's turn then player 1 resource panel will highlight. So that they can see their resources and be able to make their decision quickly.
 
 
 ---
