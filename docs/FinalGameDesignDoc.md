@@ -3,6 +3,8 @@
 ---
 ## Video
 https://www.youtube.com/watch?v=v8VP4AHV6M0
+
+---
 ## Change Log
 - Due to time constraints and implementation challenges, I was unable to incorporate the Lucky Number feature into the final version of the demo. Although the idea was to add a randomly assigned number to each player that, when rolled, would grant a special bonus, I ran into issues integrating this mechanic into the existing dice system and player logic. Given the limited development window, I chose to prioritize core gameplay features and stability over adding this optional mechanic.
 
