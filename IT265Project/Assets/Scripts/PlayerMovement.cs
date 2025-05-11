@@ -134,6 +134,14 @@ public class PlayerMovement : MonoBehaviour
             transform.position = targetPosition;
             isMoving = false;
 
+            if(currentTile.tileType == TileType.Finish){
+                Debug.Log("A player has finished the game");
+                isMyTurn = false;
+
+                FindObjectOfType<PlayerManager>().MarkPlayerAsFinished(this);
+                return;
+            }
+
             /*TileInteractionManager tileInteractionHandler = GetComponent<TileInteractionManager>();
             if(tileInteractionHandler != null && currentTile != null){
                 tileInteractionHandler.TileInteraction(currentTile);

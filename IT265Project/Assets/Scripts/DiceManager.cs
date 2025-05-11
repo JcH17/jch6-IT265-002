@@ -60,4 +60,6 @@ public class DiceManager : MonoBehaviour
             diceSides[i].SetActive(i == index);
         }
     }
+    
+    public bool IsRolling => isRolling;
 }

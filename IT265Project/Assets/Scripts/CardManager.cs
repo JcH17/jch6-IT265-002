@@ -15,6 +15,10 @@ public class CardManager : MonoBehaviour
     public Button option1Button;
     public Button option2Button;
 
+    public GameObject churchLoanPanel;
+    public Button acceptLoadButton;
+    public Button declineLoanButton;
+
     public Image cardBackgroundColor;
 
     private CardData currentCard;
@@ -46,6 +50,7 @@ public class CardManager : MonoBehaviour
             }*/
             if(!CanAfforCardEffect(card.choice1Effect)){
                 ShowInsufficientResourcesMessage();
+                ShowChurchLoanOffer();
                 return;
             }
 
@@ -77,6 +82,7 @@ public class CardManager : MonoBehaviour
             Debug.Log("Option 2 selected");
             if(!CanAfforCardEffect(card.choice2Effect)){
                 ShowInsufficientResourcesMessage();
+                ShowChurchLoanOffer();
                 return;
             }
             /*if(currentPlayer != null){
@@ -126,6 +132,23 @@ public class CardManager : MonoBehaviour
         if(noResourcePanel != null){
             noResourcePanel.SetActive(true);
             Invoke(nameof(HideInsufficientResourcesMessage), 2f);
+        }
+    }
+
+    private void ShowChurchLoanOffer(){
+        if(churchLoanPanel != null){
+            churchLoanPanel.SetActive(true);
+            acceptLoadButton.onClick.RemoveAllListeners();
+            declineLoanButton.onClick.RemoveAllListeners();
+            acceptLoadButton.onClick.AddListener(() => {
+                currentPlayer.AddGold(600);
+                currentPlayer.churchLoansTaken++;
+                churchLoanPanel.SetActive(false);
+            });
+
+            declineLoanButton.onClick.AddListener(() => {
+                churchLoanPanel.SetActive(false);
+            });
         }
     }
 

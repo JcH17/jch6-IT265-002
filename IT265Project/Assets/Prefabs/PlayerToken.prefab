@@ -168,10 +168,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goldText: {fileID: 0}
-  gold: 1000
+  gold: 0
   crownText: {fileID: 0}
   crown: 0
   wisdomText: {fileID: 0}
   wisdom: 0
   activeWealthCard: {fileID: 0}
+  churchLoansTaken: 0
   wealthCardIndicator: {fileID: 0}

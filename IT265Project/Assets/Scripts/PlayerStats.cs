@@ -13,6 +13,7 @@ public class PlayerStats : MonoBehaviour
     public int wisdom = 0;
     public CardData activeWealthCard;
     //public CardData activePolicyCard;
+    public int churchLoansTaken = 0;
     public GameObject wealthCardIndicator;
     // Start is called before the first frame update
     void Start()
