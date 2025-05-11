@@ -47,9 +47,17 @@ public class PlayerManager : MonoBehaviour
         List<int> wealthScores = new();
         List<int> totalScores = new();
 
-        int highestCrown = 0, highestWisdom = 0, highestGold = 0, highestWealth = 0, highestTotal = 0;
-        
+        int highestTotal = 0;
         int winnerIndex = -1;
+
+        foreach(var player in players){
+            var stats = player.GetComponent<PlayerStats>();
+            crownScores.Add(stats.crown * 50);
+            wisdomScores.Add(stats.wisdom * 50);
+            goldScores.Add(stats.gold);
+            wealthScores.Add(stats.activeWealthCard != null ? 100 : 0);
+        }
+
         for(int i = 0; i < players.Count; i++){
             PlayerStats stats = players[i].GetComponent<PlayerStats>();
             GameObject panel = playerFinalStatPanels[i];
@@ -67,13 +75,45 @@ public class PlayerManager : MonoBehaviour
             int wealthPoints = wealth * 100;
             int loanPenalty = loan * 600;
 
-            string title = "";
+            bool isCrownLeader = crownPoints == crownScores.Max() && crownScores.Count(s => s == crownPoints) == 1;
+            bool isWisdomLeader = wisdomPoints == wisdomScores.Max() && wisdomScores.Count(s => s == wisdomPoints) == 1;
+            bool isGoldLeader = goldPoints == goldScores.Max() && goldScores.Count(s => s == goldPoints) == 1;
+
+            List<string> titles = new();
+            if(isCrownLeader){
+                titles.Add("Tyrant");
+            }
+            if(isWisdomLeader){
+                titles.Add("Wise");
+            }
+            if(isGoldLeader){
+                titles.Add("Rich");
+            }
+            string title = "None";
             int titleBonus = 0;
 
-            crownScores.Add(crownPoints);
-            wisdomScores.Add(wisdomPoints);
-            goldScores.Add(goldPoints);
-            wealthScores.Add(wealthPoints);
+            if(titles.Count == 1){
+                title = $"{titles[0]} Ruler";
+                titleBonus = 50;
+            } else if(titles.Count >= 2){
+                titleBonus = 100;
+                if(titles.Contains("Tyrant") && titles.Contains("Wise") && titles.Contains("Rich")){
+                    title = "Emperor of Legacy";
+                } else if(titles.Contains("Tyrant") && titles.Contains("Wise")){
+                    title = "Cunning Monarch";
+                } else if(titles.Contains("Wise") && titles.Contains("Rich")){
+                    title = "Philosopher King";
+                } else if (titles.Contains("Tyrant") && titles.Contains("Rich")){
+                    title = "Baron of Greed";
+                } else {
+                    title = string.Join(" ", titles) + " Ruler";
+                }
+            }
+
+            //crownScores.Add(crownPoints);
+            //wisdomScores.Add(wisdomPoints);
+            //goldScores.Add(goldPoints);
+            //wealthScores.Add(wealthPoints);
 
             TMP_Text titleText = panel.transform.Find("TitleText").GetComponent<TMP_Text>();
             TMP_Text winnerText = panel.transform.Find("WinnerText").GetComponent<TMP_Text>();
@@ -86,7 +126,7 @@ public class PlayerManager : MonoBehaviour
             panel.transform.Find("LoanPenaltyScore").GetComponent<TMP_Text>().text = $"Loan: -{loanPenalty}";
 
 
-            if(crownPoints >= crownScores.Max()){
+            /*if(crownPoints >= crownScores.Max()){
                 title += "Tyrant ";
             }
 
@@ -103,14 +143,14 @@ public class PlayerManager : MonoBehaviour
             }
 
             int titleCount = title.Split(' ').Length / 2;
-            titleBonus = titleCount >= 2 ? 100 : (titleCount == 1 ? 50 : 0);
+            titleBonus = titleCount >= 2 ? 100 : (titleCount == 1 ? 50 : 0);*/
 
             
 
             int total = crownPoints + wisdomPoints + goldPoints + wealthPoints + titleBonus - loanPenalty;
             totalScores.Add(total);
             totalText.text = $"Total: {total}";
-            titleText.text = title;
+            titleText.text = $"Title: {title}";
             winnerText.gameObject.SetActive(false);
 
             if(total > highestTotal){

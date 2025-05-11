@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goldText: {fileID: 0}
-  gold: 0
+  gold: 500
   crownText: {fileID: 0}
   crown: 0
   wisdomText: {fileID: 0}
