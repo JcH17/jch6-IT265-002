@@ -91,7 +91,7 @@ public class TileInteractionManager : MonoBehaviour
             //playerStats.AddGold(100);
             Debug.Log("Collecting gold from your peasants. +100 gold");
             int bonus = playerStats.GetTaxBonus();
-            playerStats.AddGold(100 + bonus);
+            playerStats.AddGold(400 + bonus);
         }
     }
     
