@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e786a7f479c7c764eb4316a69358ede4, type: 3}
+  m_Name: Summit(W)
+  m_EditorClassIdentifier: 
+  cardTitle: Host a Scholar's Summit
+  description: You can invite scholars across the realm to gather at your palace
+    and exchange ideas. The summet will be a great success and elevates your reputation
+    as a learned ruler.
+  choice1Text: Gain 3 wisdom
+  choice1Effect:
+    crownChange: 0
+    wisdomChange: 3
+    goldChange: 0
+    bonusTaxAmount: 0
+  choice2Text: Decline
+  choice2Effect:
+    crownChange: 0
+    wisdomChange: 0
+    goldChange: 0
+    bonusTaxAmount: 0
+  cardColor: {r: 0.16470589, g: 0.53333336, b: 0.79215693, a: 1}
+  isWealthCard: 0
