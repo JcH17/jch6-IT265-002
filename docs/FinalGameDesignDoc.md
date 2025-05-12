@@ -172,8 +172,6 @@ PC
 ### Tools
 - Uses Unity
 - Uses C# scripting
-- AI used to help analyze any errors that appeared during development
-
 ---
 
 ## Art and Sound Direction
